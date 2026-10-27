@@ -58,3 +58,27 @@ npm start                   # Express serves client/dist and the API on one port
 | GET    | `/api/admin/users` | admin  | Account list with game stats     |
 
 `CLIENT_ORIGIN` in `.env` controls CORS (comma-separated list, default `http://localhost:5173`).
+├── server/
+│   ├── .env                 # Port, MongoDB URI, JWT Secret
+│   ├── package.json         # Express, MongoDB, Bcrypt, JWT, CORS
+│   └── server.js            # Express application with MongoDB connection
+├── client/
+│   ├── index.html           # HTML5 template with Bootstrap 4 & Fonts
+│   ├── package.json         # React 19, Vite, React Router DOM
+│   ├── vite.config.js       # Vite configuration with API proxy
+│   ├── public/              # Icons and favicon
+│   └── src/
+│       ├── main.jsx         # React root & BrowserRouter
+│       ├── App.jsx          # App router, Auth state, modals, toasts
+│       ├── App.css          # Custom styling & animations
+│       ├── index.css        # Base reset & typography
+│       ├── nav.jsx          # Responsive navbar with user badge
+│       ├── home.jsx         # Home page controller
+│       ├── homeComp/
+│       │   ├── header.jsx   # Hero banner & DB status
+│       │   ├── mainContentCont.jsx # Stats, Search, CRUD table & modals
+│       │   └── footer.jsx   # Footer with tech stack
+│       ├── about.jsx        # Project specs & architecture
+│       ├── services.jsx     # Portal services showcase
+│       └── contact.jsx      # Interactive contact form
+└── README.md                # Project documentation
